@@ -173,7 +173,30 @@ Además, en 2011 Oracle compra Sun Microsustems, desarrollador de OpenSolaris y 
 
 La limitación con el kernel línux ha hecho que ZFS, considerado por muchos el mejor sistema de ficheros durante mucho tiempo, no triunfara. Pero se han buscado alternativas. Por ejemplo, en el instalador de ubuntu (hay quien dice que no es del todo legal). 
 
+#### El proyecto
+- 2001: Comienza el desarrollo en Sun Microsystems para Solaris
+- 2005: Se libera con licencia CDDL y se incluye en OpenSolaris. CDDL es incompatible con GPL: ZFS no puede incluirse en el kérnel linux
+- 2006: Se desarrolla ZFS sobre FUSE para sistemas linux, sin módulo en el kérnel. Esto tiene penalizaciones importantes en rendimiento.
+- 2010: Oracle compra Sun Microsystems y abandona OpenSolaris. ZFS vuelve a ser software cerrado. Pero de lo que está liberado se puede hacer un fork. 
+- 2010: Se crea Illumos, fork libre de OpenSolaris
+- 2013: Se anuncia OpenZFS como fork libre de ZFS
+- 2015: Aparece ZFS on Linux, versión de OpenZFS para linux. Pero sigue teniendo el problema de ser una CDDL.
+
+#### Características de OpenZFS
+- Es un sistema completo de almacenamiento que no requiere otras herramientas
+- Gestiona los dispositivos de bloques directamente
+- Incluye su propia implementación de RAID
+- CoW, deduplicación, instantáneas, compresión, cifrado, soportenativo de nfs, cifs o iscsi, . . .
+- Siempre consistente sin necesidad de chequeos. No necesita chequeos, porque se autochequea continuamente y se autorepara.
+- Se autorepara de forma continua
+- Muy escalable
+- Exigente en recursos
+
+#### [Práctica: configura ZFS en Debian](URL)
+
+
 ## Btrfs
+En 2008 comienza el desarrollo por empleados de Oracle. Se incluye Btrfs en el kérnel linux. No existe suficientes desarrolladores para el proyecto, por lo que ha tardado mucho. Es similar a ZFS pero está en el kérnel Linux. 
 
 # LVM
 
