@@ -120,7 +120,7 @@ Herramientas del espacio de usuario:dosfstools:
 
 
 #### Copy on Write(CoW)
-Se descomponen los datos a almacenar en diferentes bloques. Al cerar la copia solo se crea un nuevo puntero que apunta al conjunto de datos originales. Cuando los datos cppiados se modifican, se van creando nuevos bloques con las modificaciones. Las versiones divergen a medida que van cambiando. 
+Se descomponen los datos a almacenar en diferentes bloques. Al cerrar la copia solo se crea un nuevo puntero que apunta al conjunto de datos originales. Cuando los datos copiados se modifican, se van creando nuevos bloques con las modificaciones. Las versiones divergen a medida que van cambiando. 
 
 reflink habilitado en un sistema de ficheros (reflink =1) significa que el copy on write está activo. 
 
@@ -142,7 +142,7 @@ Ahora bien, al realizar una modificación ya si hay una diferencia, muy pequeña
 #### Deduplicacion
 Utiliza las propiedades Copy on Write de un sistema de ficheros. Identifica bloques idénticos y los reorganiza con Cow. Permite aprovechar la funcionalidad CoW sin intervención del usuario. 
 
-Ejemplo: En un directorio con las cuentas de correo de todos losusuarios de la organizaci ́on se guarda solo una copia del ficheroadjunto enviado a todas las cuentas.
+Ejemplo: En un directorio con las cuentas de correo de todos los usuarios de la organizacion se guarda solo una copia del fichero adjunto enviado a todas las cuentas.
 
 
 #### Cifrado
@@ -152,7 +152,7 @@ Permite el cifrado de ficheros al vuelo sin utilizar software adicional. Esto es
 Almacena los ficheros comprimidos para optimizar el uso del espacio. 
 
 #### Gestion de volumenes
-Equivalente a LVM, pero sin LVM. PErmite gestional volúmen y sistemas de ficheros de forma independiente de los dispositivos de bloques físicos. Un dispositivo de bloques sísico puede contener varios volúmenes o un volumen puede estar distribuido en varios dispositivos de bloques físicos. 
+Equivalente a LVM, pero sin LVM. Permite gestional volúmen y sistemas de ficheros de forma independiente de los dispositivos de bloques físicos. Un dispositivo de bloques sísico puede contener varios volúmenes o un volumen puede estar distribuido en varios dispositivos de bloques físicos. 
 
 #### Instantaneas (snapshots)
 Utiliza instantáneas de forma nativa. 
