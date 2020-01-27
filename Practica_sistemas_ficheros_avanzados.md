@@ -314,7 +314,7 @@ config:
 errors: No known data errors
 ~~~
 
-##### Creción del RAIDZ
+##### Creación del RAIDZ
 RAID Z implementa un esquema de redundancia paredico al RAID 5. Se pueden realizar 3 tipos de RAIDZ. A continuación, se muestra un ejemplo de cómo realizar un RAIDZ 2 que tiene 2bits de paridad, por lo tanto necesita 4 discos:
 ~~~
 vagrant@nfs:~$ sudo zpool create -f RAIDZ raidz2 /dev/sdb /dev/sdc /dev/sdd /dev/sde
