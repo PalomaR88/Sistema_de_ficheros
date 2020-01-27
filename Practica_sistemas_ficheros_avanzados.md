@@ -314,6 +314,52 @@ config:
 errors: No known data errors
 ~~~
 
+##### Creción del RAIDZ
+RAID Z implementa un esquema de redundancia paredico al RAID 5. Se pueden realizar 3 tipos de RAIDZ. A continuación, se muestra un ejemplo de cómo realizar un RAIDZ 2 que tiene 2bits de paridad, por lo tanto necesita 4 discos:
+~~~
+vagrant@nfs:~$ sudo zpool create -f RAIDZ raidz2 /dev/sdb /dev/sdc /dev/sdd /dev/sde
+vagrant@nfs:~$ sudo zpool status -v RAIDZ
+  pool: RAIDZ
+ state: ONLINE
+  scan: none requested
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	RAIDZ       ONLINE       0     0     0
+	  raidz2-0  ONLINE       0     0     0
+	    sdb     ONLINE       0     0     0
+	    sdc     ONLINE       0     0     0
+	    sdd     ONLINE       0     0     0
+	    sde     ONLINE       0     0     0
+
+errors: No known data errors
+~~~
+
+Además, se añade un disco de reserva:
+~~~
+vagrant@nfs:~$ sudo zpool add RAIDZ spare sdf
+vagrant@nfs:~$ zpool status
+-bash: zpool: command not found
+vagrant@nfs:~$ sudo zpool status
+  pool: RAIDZ
+ state: ONLINE
+  scan: none requested
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	RAIDZ       ONLINE       0     0     0
+	  raidz2-0  ONLINE       0     0     0
+	    sdb     ONLINE       0     0     0
+	    sdc     ONLINE       0     0     0
+	    sdd     ONLINE       0     0     0
+	    sde     ONLINE       0     0     0
+	spares
+	  sdf       AVAIL   
+
+errors: No known data errors
+~~~
+
+Si uno de los discos falla, al tener 2bits de paridad no hay pérdida de datos.
 
 #### Ventajas e incovenientes mdadm/ZFS
 **Ventajas de mdadm frente a ZFS**
@@ -407,4 +453,29 @@ vagrant@nfs:/RAID1/compression$ sudo zfs list
 NAME    USED  AVAIL     REFER  MOUNTPOINT
 RAID1   924M   368M      922M  /RAID1
 ~~~
+
+##### CoW
+La técnica de almacenamiento de datos Copy-on-write realiza una copia del bloque que se va a modificar en lugar de modificar el bloque de datos directamente. Toma instantáneas de los datos permitiendo el rescate en caso de fallo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
