@@ -365,7 +365,7 @@ Se abre la ventana del Inicador iSCSA y en la pestaña de detección se pulsa en
 ![imagen](https://github.com/PalomaR88/Sistema_de_ficheros/blob/master/iSCSI/Captura%20de%20pantalla%20de%202020-02-02%2023-11-20.png)
 
 Pestaña **Destinos**, se pulsa el target al que se quiere conectar.
-![imagen](iSCSI/Captura\ de\ pantalla\ de\ 2020-02-02\ 23-12-48.png)
+![imagen](iSCSI/Captura%de%pantalla%de%2020-02-02%23-12-48.png)
 
 Aparece una ventana donde hay que seleccionar **Opciones avanzadas**. Se selecciona la opción **Habilitar inicio de sesión CHAP**, donde se introduce el usuario y la contraseña que se indicó en el servidor.
 ![imagen](iSCSI/Captura\ de\ pantalla\ de\ 2020-02-02\ 23-14-02.png)
