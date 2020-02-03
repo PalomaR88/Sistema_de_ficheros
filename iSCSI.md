@@ -1,5 +1,5 @@
 **Configura un sistema que exporte algunos targets por iSCSI y los conecte a diversos clientes, explicando con detalle la forma de trabajar.**
-La creación del escenario se va a realizar con vagrant, la configuración se encuentra en el [siguiente enlace](aqui la URL). Se ha creado una máquina debian con 3 volúmenes asociados y dos máquinas clientes, una debian y otra windows. Todas tienen dos interfaces de red, un enlace a internet y una red interna. Lo correcto sería que el servidor no tuviera conexión con internet, pero para la configuración es necesaria. 
+La creación del escenario se va a realizar con vagrant, la configuración se encuentra en el [siguiente enlace](https://github.com/PalomaR88/Sistema_de_ficheros/blob/master/iSCSI/Vagrantfile). Se ha creado una máquina debian con 3 volúmenes asociados y dos máquinas clientes, una debian y otra windows. Todas tienen dos interfaces de red, un enlace a internet y una red interna. Lo correcto sería que el servidor no tuviera conexión con internet, pero para la configuración es necesaria. 
 
 **- Crea un target con una LUN y conéctala a un cliente GNU/Linux. Explica cómo escaneas desde el cliente buscando los targets disponibles y utiliza la unidad lógica proporcionada, formateándola si es necesario y montándola.**
 
@@ -362,7 +362,7 @@ Target 2: iqn.2020-02.com:tg2
 
 ### Configuración del cliente
 Se abre la ventana del Inicador iSCSA y en la pestaña de detección se pulsa en **Detectar portal...** Aquí se indica la IP de la máquina servidor.
-[imagen](iSCSI/Captura\ de\ pantalla\ de\ 2020-02-02\ 23-11-20.png)
+[imagen](iSCSI/Captura de pantalla de 2020-02-02 23-11-20.png)
 
 Pestaña **Destinos**, se pulsa el target al que se quiere conectar.
 [imagen](iSCSI/Captura\ de\ pantalla\ de\ 2020-02-02\ 23-12-48.png)
