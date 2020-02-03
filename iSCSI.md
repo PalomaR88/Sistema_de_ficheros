@@ -366,25 +366,32 @@ Se abre la ventana del Inicador iSCSA y en la pestaña de detección se pulsa en
 ![imagen](https://github.com/PalomaR88/Sistema_de_ficheros/blob/master/iSCSI/Captura%20de%20pantalla%20de%202020-02-02%2023-11-20.png)
 
 Pestaña **Destinos**, se pulsa el target al que se quiere conectar.
+
 ![imagen](https://github.com/PalomaR88/Sistema_de_ficheros/blob/master/iSCSI/Captura%20de%20pantalla%20de%202020-02-02%2023-12-48.png)
 
 Aparece una ventana donde hay que seleccionar **Opciones avanzadas**. Se selecciona la opción **Habilitar inicio de sesión CHAP**, donde se introduce el usuario y la contraseña que se indicó en el servidor.
+
 ![imagen](https://github.com/PalomaR88/Sistema_de_ficheros/blob/master/iSCSI/Captura%20de%20pantalla%20de%202020-02-02%2023-14-02.png)
 
 De esta forma, aparece el target cuya conexión se ha configurado con el estado Conectado:
+
 ![imagen](https://github.com/PalomaR88/Sistema_de_ficheros/blob/master/iSCSI/Captura%20de%20pantalla%20de%202020-02-02%2023-16-37.png)
 
 A Continuación, se inicializa y se formatea con NFTS en la controladora **Administración de discos**. 
+
 ![imagen](https://github.com/PalomaR88/Sistema_de_ficheros/blob/master/iSCSI/Captura%20de%20pantalla%20de%202020-02-02%2023-17-22.png)
 
 Se seleccionan ambos discos para comenzar el proceso:
+
 ![imagen](https://github.com/PalomaR88/Sistema_de_ficheros/blob/master/iSCSI/Captura%20de%20pantalla%20de%202020-02-02%2023-17-41.png)
 
 Se va formatear con NTFS ambos volúmenes:
+
 ![imagen](https://github.com/PalomaR88/Sistema_de_ficheros/blob/master/iSCSI/Captura%20de%20pantalla%20de%202020-02-02%2023-18-20.png)
 ![imagen](https://github.com/PalomaR88/Sistema_de_ficheros/blob/master/iSCSI/Captura%20de%20pantalla%20de%202020-02-02%2023-18-49.png)
 
 Y así aparecerán en las unidades del sistema como el disco E: y F:
+
 ![imagen](https://github.com/PalomaR88/Sistema_de_ficheros/blob/master/iSCSI/Captura%20de%20pantalla%20de%202020-02-02%2023-23-07.png)
 
 
