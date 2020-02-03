@@ -362,7 +362,7 @@ Target 2: iqn.2020-02.com:tg2
 
 ### Configuración del cliente
 Se abre la ventana del Inicador iSCSA y en la pestaña de detección se pulsa en **Detectar portal...** Aquí se indica la IP de la máquina servidor.
-[imagen](iSCSI/Captura de pantalla de 2020-02-02 23-11-20.png)
+[imagen](https://github.com/PalomaR88/Sistema_de_ficheros/blob/master/iSCSI/Captura%20de%20pantalla%20de%202020-02-02%2023-11-20.png)
 
 Pestaña **Destinos**, se pulsa el target al que se quiere conectar.
 [imagen](iSCSI/Captura\ de\ pantalla\ de\ 2020-02-02\ 23-12-48.png)
